@@ -1,16 +1,35 @@
-# MemoryManagment
-You will develop a memory allocation simulator to allocate
-variable-sized partitions of the memory to a given sequence of
-processes requests. Apply different allocation policies:
+# Memory Allocation Simulator
+<!DOCTYPE html>
+<html>
+<body>
+  <p>
+    I have developed a memory allocation simulator that allows for the allocation of variable-sized partitions of memory to a given sequence of process requests. The simulator implements different allocation policies to cater to various scenarios.
+  </p>
 
-1. First-Fit policy.
-2. Best-Fit policy.
-3. Worst-Fit policy.
+  <h2>Allocation Policies</h2>
+  <ol>
+    <li>
+      <strong>First-Fit Policy:</strong> This policy searches for the first available memory partition that is large enough to accommodate the process request. It allocates the process to that partition, ensuring that the request is fulfilled promptly.
+    </li>
+    <li>
+      <strong>Best-Fit Policy:</strong> In this policy, the simulator searches for the smallest available memory partition that can accommodate the process request. By allocating the process to the best-fitting partition, this policy aims to minimize fragmentation and optimize memory utilization.
+    </li>
+    <li>
+      <strong>Worst-Fit Policy:</strong> The worst-fit policy takes the opposite approach of the best-fit policy. It searches for the largest available memory partition and allocates the process request to that partition. This policy can be useful in scenarios where larger partitions are preferred or when dealing with larger processes.
+    </li>
+  </ol>
 
-● Add compaction (as option for the user): in compaction you shuffle
-the memory contents so as to place all free memory together in one
-large block.
+  <p>
+    Additionally, I have included an option for compaction in the simulator. Compaction involves rearranging the contents of memory to consolidate all free memory blocks into one large contiguous block. This helps to reduce fragmentation and maximize available memory for future allocations.
+  </p>
 
+  <p>
+    By implementing these allocation policies and providing the option for compaction, the memory allocation simulator offers flexibility in managing memory resources efficiently for a variety of process requests.
+  </p>
+</body>
+</html>
+
+ <!--
 Input will be as follows:  
 - Number of partition  
 - Partition name and its size.  
@@ -99,3 +118,4 @@ Partition 5 (80 KB) => External fragment
 Process 4 can not be allocated  
 Do you want to compact? 1.yes 2.no  
 2  
+-->
